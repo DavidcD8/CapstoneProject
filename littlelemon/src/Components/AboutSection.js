@@ -1,17 +1,40 @@
 import React from 'react';
+import MariondAdrian from '../../src/assets/image/MariondAdrian.jpg';
+import restaurant from '../../src/assets/image/restaurant.jpg';
+import '../App.css';
 
 function AboutSection() {
   return (
-    <section id="about">
-      {/* Name */}
-      <h2>About Us</h2>
-
-      {/* Description */}
-      <p>Description of the restaurant</p>
-
-      {/* Photo of Elly and Mary */}
-      <img src="elly-and-mary-photo.png" alt="Elly and Mary" />
-    </section>
+    <div className="about">
+      <div className="about-text">
+        <h1 className="about-title">Little Lemon</h1>
+        <h2 className="about-subtitle">Chicago</h2>
+        <p className="about-description">
+          Little Lemon is a family-owned Mediterranean restaurant <br />
+          based in Chicago. We focus on traditional recipes<br />
+          served with a modern twist. <br />
+          Our aim is to provide our customers with an unforgettable<br />
+          dining experience, featuring the freshest ingredients<br />
+          and a warm, welcoming atmosphere.
+        </p>
+      </div>
+      <div className="about-images">
+        <img
+          className="about-Restaurant"
+          src={restaurant}
+          alt="Restaurant"
+          height={200}
+          width={200}
+        />
+        <img
+          className="about-MariondAdrian"
+          src={MariondAdrian}
+          alt="Mario and Adrian"
+          height={200}
+          width={200}
+        />
+      </div>
+    </div>
   );
 }
 

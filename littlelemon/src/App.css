@@ -1,276 +1,790 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* Global styles */
-body {
+/* General Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* App styling */
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  font-family: 'Markazi Text', serif;
+  color: #333;
+  background-color: #f8f8f8;
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f4f4f4;
-  padding: 10px 20px;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-list {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.nav-list .logo-item {
+.logo-item {
   margin-right: auto;
 }
 
-.nav-list li {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list li a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-}
-
-.nav-list li a:hover {
-  color: blue; /* Change the color on hover as desired */
-}
-
 .logo {
-  width: 100px;
+  width: 200px;
+  height: 50px;
+}
+
+.nav-list li {
+  margin-left: 2rem;
+
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+
+}
+
+.nav-list a:hover {
+  background-color: #f4a261;
 }
 
 /* Hero Section */
 #hero {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 50px;
+  align-items: center;
+  padding: 2rem;
   background-color: #495E57;
-
 }
 
-#hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #F4CE14;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-.hero-text > h2{
-color: #ffffff;
-font-family: 'Times New Roman', Times, serif;
-}
-
-
-#hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #ffffff;
-
-}
-
-#hero .hero-content {
+.hero-content {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  color: #F4CE14;
+  font-family: 'Markazi Text', serif;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.hero-text button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #F4CE14;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #f4a261;
+}
+
+.hero_image {
+  max-width: 30%;
+  max-height: 300px;
+  object-fit: cover;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+
+/* Form*/
+/* Form Grid Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: #dededead 1px 1px 1px 1px  ;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 50%;
+}
+
+.form-grid h2 {
+  grid-column: span 2;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.form-grid label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-grid input[type="submit"] {
+  grid-column: span 2;
+  background-color: #f4ce14;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-grid input[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid h2 {
+    margin-bottom: 1rem;
+  }
+
+  .form-grid input[type="submit"] {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-grid {
+    padding: 1rem;
+  }
+
+  .form-grid input,
+  .form-grid select {
+    padding: 0.4rem;
+  }
+
+  .form-grid input[type="submit"] {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* Specials Section */
+.highlight-section {
+  padding: 2rem;
+  background-color: #e9ecef;
+}
+
+.specials-header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  margin-bottom: 1rem;
 }
 
-#hero img {
-  width: 400px;
-  height: 450px;
-  align-self: flex-end;
-  border-radius: 8px;
+.specials-header h2 {
+  font-size: 2rem;
+  color: #555;
 }
 
-#hero button {
+.online-menu-button {
+  padding: 0.5rem 1rem;
   background-color: #F4CE14;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
   color: rgb(0, 0, 0);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  font-size: 16px;
 }
 
-#hero button:hover {
-  background-color: #927a02; /* Change the background color on hover as desired */
+.online-menu-button:hover {
+  background-color: #f4a261;
 }
 
-/* Highlights Section */
-#highlights {
-  text-align: center;
-  padding: 50px;
-}
-
-#highlights button {
-  background-color: green;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-right: 20px;
-}
-
-#highlights button:last-child {
-  margin-right: 0; /* Remove margin from the last button */
-}
-
-#highlights img {
-  width: 100%; /* Adjust the width as needed */
-  max-width: 400px; /* Set maximum width */
-  margin-top: 20px;
-}
-
-/* Testimonials Section */
-#testimonials {
-  text-align: center;
-  padding: 50px;
-}
-
-/* About Section */
-#about {
-  text-align: center;
-  padding: 50px;
-}
-
-#about img {
-  width: 100%; /* Adjust the width as needed */
-  max-width: 400px; /* Set maximum width */
-  margin-top: 20px;
-}
-
-/* Footer Navigation */
-footer {
-  background-color: #f4f4f4;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
-  align-items: center;
-}
-
-.footer-content .logo img {
-  max-width: 100px;
-}
-
-.footer-content .social-media {
+.specials-list {
   display: flex;
-  justify-content: center;
-  gap: 1em;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.footer-content .social-media a img {
+.food-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.food-card-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.food-card-body {
+  padding: 1rem;
+}
+
+.food-card-body-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card-body-title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.food-card-title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.food-card-price {
+  font-size: 1.2rem;
+  color: #f4a261;
+}
+
+.food-card-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.food-card-delivery {
+  display: flex;
+  align-items: center;
+  background-color: #00000000;
+  border: none;
+}
+
+.food-card-delivery-title:hover {
+  color: #F4CE14;
+}
+
+.food-card-delivery-title {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.delivery-icon {
   width: 24px;
   height: 24px;
 }
 
-.footer-content .contact-info ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+/* Testimonials Section */
+#testimonials {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
 }
 
-.footer-content .contact-info {
-  text-align: right;
+.testimonials-header {
+  margin-bottom: 2rem;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
+.testimonials-header h2 {
+  font-size: 2rem;
+  color: #555;
+}
+
+.testimonials-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-rating {
+  font-size: 1.5rem;
+  color: #f4a261;
+}
+
+.testimonial-review {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* About Section */
+.about {
+  padding: 2rem;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr auto; /* Two columns: text and images */
+  align-items: start; /* Align items to the top */
+  gap: 2rem; /* Gap between text and images */
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #F4CE14;
+  margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+  font-family: "Markazi Text";
+  font-size: 40px;
+  line-height: 1.2;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.about-images {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.about-Restaurant {
+  object-fit: cover;
+  width: 100%;
+  height: 350px;
+  max-width: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-MariondAdrian {
+  object-fit: cover;
+  width: 100%;
+  height: 350px;
+  max-width: 300px;
+  position: absolute;
+  z-index: 1;
+  right: 200px;
+  bottom: -12px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .about {
+    grid-template-columns: 1fr; /* Stack text and images vertically */
   }
 
-  .footer-content .contact-info {
-    text-align: center;
-  }
-
-  .footer-content .social-media {
+  .about-images {
+    display: flex;
     justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .about-MariondAdrian {
+    right: 0;
+    bottom: 0;
   }
 }
 
-/* Responsive */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .about-description {
+    font-size: 1.2rem;
+  }
+
+  .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-Restaurant,
+  .about-MariondAdrian {
+    max-width: 250px;
+    height: auto;
+  }
+
+  .about-MariondAdrian {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-Restaurant,
+  .about-MariondAdrian {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .about-MariondAdrian {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-column {
+  width: 30%;
+  margin-bottom: 1rem;
+}
+
+.footer-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style-type: none;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-column a:hover {
+  color: #f4a261;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .specials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-card {
+    width: 80%;
+  }
+
+  .testimonial-card {
+    width: 45%;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-list {
     flex-direction: column;
-    align-items: center;
   }
 
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .nav-list li {
+    margin: 0.5rem 0;
   }
 
   #hero {
-    align-items: center;
-    
+    flex-direction: column;
   }
 
-  #hero .hero-content {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlight-section {
+    padding: 1rem;
+  }
+
+  .specials-header {
+    flex-direction: column;
+  }
+
+  .about {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .testimonial-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .specials-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .online-menu-button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .food-card-title {
+    font-size: 1.25rem;
+  }
+
+  .food-card-price {
+    font-size: 1rem;
+  }
+
+  .food-card-description {
+    font-size: 0.875rem;
+  }
+
+  .food-card-delivery-title {
+    font-size: 0.875rem;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.social-media a {
+  margin: 0 1rem;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .specials-list {
     flex-direction: column;
     align-items: center;
-    
   }
 
-  #hero img {
-    align-self: center;
+  .food-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin: 0.5rem 0;
+  }
+
+  #hero {
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlight-section {
+    padding: 1rem;
+  }
+
+  .specials-header {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about img {
+    margin-left: 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .specials-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .online-menu-button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .food-card-title {
+    font-size: 1.25rem;
+  }
+
+  .food-card-price {
+    font-size: 1rem;
+  }
+
+  .food-card-description {
+    font-size: 0.875rem;
+  }
+
+  .food-card-delivery-title {
+    font-size: 0.875rem;
   }
 }
