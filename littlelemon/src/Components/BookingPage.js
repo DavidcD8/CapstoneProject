@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import BookingForm from './BookingForm';
 import '../App.css';
 
-const BookingPage = ({ availableTimes, dispatch }) => {
+const BookingPage = ({ availableTimes, dispatch, submitForm }) => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('17:00');
   const [guests, setGuests] = useState(1);
@@ -31,6 +31,7 @@ const BookingPage = ({ availableTimes, dispatch }) => {
         occasion={occasion}
         setOccasion={setOccasion}
         handleSubmit={handleSubmit}
+        submitForm={submitForm}
         availableTimes={availableTimes}
         dispatch={dispatch}
       />

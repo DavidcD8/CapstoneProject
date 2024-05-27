@@ -1,24 +1,43 @@
 import React, { useReducer } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import BookingPage from './BookingPage';
 import AboutSection from './AboutSection';
 import HeroSection from './HeroSection';
 import Testimonials from './Testimonials';
 import Highlights from './Highlights';
-import { fetchAPI } from "../api/api";
+import ConfirmedBooking from './ConfirmedBooking';
+import { fetchAPI, submitAPI } from '../api/api';
 
-const initializeTimes = (initialAvailableTimes) => [
-  ...initialAvailableTimes,
-  ...fetchAPI(new Date()),
-];
+export const initializeTimes = (initialAvailableTimes, fetchAPI) => {
+  const fetchedTimes = fetchAPI(new Date());
+  return [...initialAvailableTimes, ...fetchedTimes];
+};
 
-const updateTimes = (availableTimes, date) => {
+
+export const updateTimes = (availableTimes, date, fetchAPI) => {
   const response = fetchAPI(new Date(date));
   return response.length !== 0 ? response : availableTimes;
 };
 
+
+
+
 function Main() {
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+  const navigate = useNavigate();
+
+  const submitForm = async (formData) => {
+    
+    const success = await submitAPI(formData);
+    
+    if (success) {
+      navigate('/confirmation');
+    } else {
+      console.error('Booking submission failed');
+    }
+  };
+
+
 
   return (
     <main>
@@ -31,9 +50,10 @@ function Main() {
             <AboutSection />
           </>
         } />
-        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
+        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
         <Route path="/herosection" element={<HeroSection />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/confirmation" element={<ConfirmedBooking />} />
         <Route path="/highlight" element={<Highlights />} />
         <Route path="/about" element={<AboutSection />} />
       </Routes>
