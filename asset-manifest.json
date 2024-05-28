@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/DavidcD8/CapstoneProject.git/static/css/main.e56bc93e.css",
-    "main.js": "/DavidcD8/CapstoneProject.git/static/js/main.3c9a4cfa.js",
-    "static/js/453.8dae57ee.chunk.js": "/DavidcD8/CapstoneProject.git/static/js/453.8dae57ee.chunk.js",
-    "static/media/MariondAdrian.jpg": "/DavidcD8/CapstoneProject.git/static/media/MariondAdrian.7f44c6d6e341a27d14b3.jpg",
-    "static/media/bruschetta.svg": "/DavidcD8/CapstoneProject.git/static/media/bruschetta.29ea078fea3d3120ed22402e901b5bbc.svg",
-    "static/media/greeksalad.jpg": "/DavidcD8/CapstoneProject.git/static/media/greeksalad.bed423a1fab5b210e347.jpg",
-    "static/media/restauranfood.jpg": "/DavidcD8/CapstoneProject.git/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
-    "static/media/restaurant.jpg": "/DavidcD8/CapstoneProject.git/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
-    "static/media/Logo.svg": "/DavidcD8/CapstoneProject.git/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
-    "static/media/instagram.png": "/DavidcD8/CapstoneProject.git/static/media/instagram.e719d8b29f452a16302d.png",
-    "static/media/businessman.png": "/DavidcD8/CapstoneProject.git/static/media/businessman.533ee2d3d9b0b5ff9a23.png",
-    "static/media/girl.png": "/DavidcD8/CapstoneProject.git/static/media/girl.85eeddaafae9a36b7f1b.png",
-    "static/media/woman.png": "/DavidcD8/CapstoneProject.git/static/media/woman.5077f2e0499f29c01f12.png",
-    "static/media/bussinessman2.png": "/DavidcD8/CapstoneProject.git/static/media/bussinessman2.6bd4263915f540cc26aa.png",
-    "static/media/star.png": "/DavidcD8/CapstoneProject.git/static/media/star.618d11e122cbca3f8e9e.png",
-    "static/media/twitter.png": "/DavidcD8/CapstoneProject.git/static/media/twitter.894988327f8d68209e91.png",
-    "index.html": "/DavidcD8/CapstoneProject.git/index.html",
-    "static/media/delivery.svg": "/DavidcD8/CapstoneProject.git/static/media/delivery.51c0da9db08aea9794adf2fd86bd007a.svg",
-    "main.e56bc93e.css.map": "/DavidcD8/CapstoneProject.git/static/css/main.e56bc93e.css.map",
-    "main.3c9a4cfa.js.map": "/DavidcD8/CapstoneProject.git/static/js/main.3c9a4cfa.js.map",
-    "453.8dae57ee.chunk.js.map": "/DavidcD8/CapstoneProject.git/static/js/453.8dae57ee.chunk.js.map"
+    "main.css": "/static/css/main.e56bc93e.css",
+    "main.js": "/static/js/main.6c99d4a5.js",
+    "static/js/453.8dae57ee.chunk.js": "/static/js/453.8dae57ee.chunk.js",
+    "static/media/MariondAdrian.jpg": "/static/media/MariondAdrian.7f44c6d6e341a27d14b3.jpg",
+    "static/media/bruschetta.svg": "/static/media/bruschetta.29ea078fea3d3120ed22402e901b5bbc.svg",
+    "static/media/greeksalad.jpg": "/static/media/greeksalad.bed423a1fab5b210e347.jpg",
+    "static/media/restauranfood.jpg": "/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
+    "static/media/restaurant.jpg": "/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
+    "static/media/Logo.svg": "/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
+    "static/media/instagram.png": "/static/media/instagram.e719d8b29f452a16302d.png",
+    "static/media/businessman.png": "/static/media/businessman.533ee2d3d9b0b5ff9a23.png",
+    "static/media/girl.png": "/static/media/girl.85eeddaafae9a36b7f1b.png",
+    "static/media/woman.png": "/static/media/woman.5077f2e0499f29c01f12.png",
+    "static/media/bussinessman2.png": "/static/media/bussinessman2.6bd4263915f540cc26aa.png",
+    "static/media/star.png": "/static/media/star.618d11e122cbca3f8e9e.png",
+    "static/media/twitter.png": "/static/media/twitter.894988327f8d68209e91.png",
+    "static/media/delivery.svg": "/static/media/delivery.51c0da9db08aea9794adf2fd86bd007a.svg",
+    "index.html": "/index.html",
+    "main.e56bc93e.css.map": "/static/css/main.e56bc93e.css.map",
+    "main.6c99d4a5.js.map": "/static/js/main.6c99d4a5.js.map",
+    "453.8dae57ee.chunk.js.map": "/static/js/453.8dae57ee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e56bc93e.css",
-    "static/js/main.3c9a4cfa.js"
+    "static/js/main.6c99d4a5.js"
   ]
 }
