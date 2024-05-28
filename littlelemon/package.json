@@ -1,9 +1,9 @@
 {
   "name": "littlelemon",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "homepage": "https://DavidcD8.github.io
+    "homepage": "https://github.com/DavidcD8/CapstoneProject",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
