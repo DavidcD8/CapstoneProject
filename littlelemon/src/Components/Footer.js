@@ -1,22 +1,26 @@
 import React from 'react';
 import '../App.css';
+import Logo from '../../src/assets/image/Logo.svg';
+import instagram from '../../src/assets/image/instagram.png';
+import twitter from '../../src/assets/image/twitter.png';
+import facebook from '../../src/assets/image/facebook.png';
 
 function Footer() {
   return (
     <footer>
       <div className="footer-content">
         <div className="logo">
-          <img src="logo.png" alt="Logo" />
+          <img src={Logo} alt="Logo" />
         </div>
         <div className="social-media">
-          <a href="https://example.com/facebook" target="_blank" rel="noopener noreferrer">
-            <img src="facebook-icon.png" alt="Facebook" />
+          <a href="https://facebook.com/facebook" target="_blank" rel="noopener noreferrer">
+            <img src={facebook} alt="Facebook" />
           </a>
-          <a href="https://example.com/twitter" target="_blank" rel="noopener noreferrer">
-            <img src="twitter-icon.png" alt="Twitter" />
+          <a href="https://twitter.com/twitter" target="_blank" rel="noopener noreferrer">
+            <img src={twitter} alt="Twitter" />
           </a>
-          <a href="https://example.com/instagram" target="_blank" rel="noopener noreferrer">
-            <img src="instagram-icon.png" alt="Instagram" />
+          <a href="https://instagram.com/instagram" target="_blank" rel="noopener noreferrer">
+            <img src={instagram}alt="Instagram" />
           </a>
         </div>
         <div className="contact-info">

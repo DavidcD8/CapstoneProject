@@ -8,17 +8,15 @@ import Highlights from './Highlights';
 import ConfirmedBooking from './ConfirmedBooking';
 import { fetchAPI, submitAPI } from '../api/api';
 
-export const initializeTimes = (initialAvailableTimes, fetchAPI) => {
-  const fetchedTimes = fetchAPI(new Date());
-  return [...initialAvailableTimes, ...fetchedTimes];
-};
+export const initializeTimes = (initialAvailableTimes) => [
+  ...initialAvailableTimes,
+  ...fetchAPI(new Date()),
+];
 
-
-export const updateTimes = (availableTimes, date, fetchAPI) => {
+const updateTimes = (availableTimes, date) => {
   const response = fetchAPI(new Date(date));
   return response.length !== 0 ? response : availableTimes;
 };
-
 
 
 

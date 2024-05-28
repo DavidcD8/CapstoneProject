@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BookingForm from './BookingForm';
+import BookingForm from './BookingForm'
 import '../App.css';
 
 const BookingPage = ({ availableTimes, dispatch, submitForm }) => {

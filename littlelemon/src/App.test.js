@@ -1,8 +1,8 @@
-//import { render, fireEvent, screen } from "@testing-library/react";
-//import BookingForm from "./Components/BookingForm";
+import { render, fireEvent, screen } from "@testing-library/react";
+import BookingForm from "./Components/BookingForm";
 import './api/api';
-import { initializeTimes } from './Components/Main'
-import { updateTimes } from './Components/Main'
+//import { initializeTimes } from './Components/Main'
+//import { updateTimes } from './Components/Main'
 
 
 /*
@@ -109,43 +109,174 @@ describe('updateTimes', () => {
 });
 */
 
-
+/*
 // Function to write data to local storage
 const writeToLocalStorage = (key, value) => {
     localStorage.setItem(key, value);
   };
-  
+
   // Function to read data from local storage
   const readFromLocalStorage = (key) => {
     return localStorage.getItem(key);
   };
-  
+
 // Test for writing to local storage
 test('writing to local storage', () => {
     const key = 'testKey';
     const value = 'testValue';
-    
+
     // Call a function that writes to local storage
     writeToLocalStorage(key, value);
-    
+
     // Retrieve the value from local storage
     const storedValue = localStorage.getItem(key);
-    
+
     // Assert that the retrieved value matches the expected value
     expect(storedValue).toBe(value);
   });
-  
+
   // Test for reading from local storage
   test('reading from local storage', () => {
     const key = 'testKey';
     const value = 'testValue';
-    
     // Set an item in local storage
     localStorage.setItem(key, value);
-    
     // Call a function that reads from local storage
     const retrievedValue = readFromLocalStorage(key);
-    
     // Assert that the retrieved value matches the expected value
     expect(retrievedValue).toBe(value);
   });
+  */
+
+ 
+  describe('BookingForm HTML5 Validation', () => {
+    const defaultProps = {
+      date: '',
+      setDate: jest.fn(),
+      time: '',
+      setTime: jest.fn(),
+      guests: '',
+      setGuests: jest.fn(),
+      occasion: '',
+      setOccasion: jest.fn(),
+      handleSubmit: jest.fn(),
+      availableTimes: [],
+      dispatch: jest.fn(),
+      submitForm: jest.fn(),
+    };
+  
+    test('date input has required attribute', () => {
+      render(<BookingForm {...defaultProps} />);
+      const dateInput = screen.getByLabelText(/choose date/i);
+      expect(dateInput).toBeRequired();
+    });
+  
+    test('time select has required attribute', () => {
+      render(<BookingForm {...defaultProps} />);
+      const timeSelect = screen.getByLabelText(/choose time/i);
+      expect(timeSelect).toBeRequired();
+    });
+  
+    test('guests input has required, min, and max attributes', () => {
+      render(<BookingForm {...defaultProps} />);
+      const guestsInput = screen.getByLabelText(/number of guests/i);
+      expect(guestsInput).toBeRequired();
+      expect(guestsInput).toHaveAttribute('min', '1');
+      expect(guestsInput).toHaveAttribute('max', '10');
+    });
+  
+    test('occasion select has required attribute', () => {
+      render(<BookingForm {...defaultProps} />);
+      const occasionSelect = screen.getByLabelText(/occasion/i);
+      expect(occasionSelect).toBeRequired();
+    });
+  });
+  
+
+
+
+  describe('BookingForm JavaScript Validation', () => {
+    const defaultProps = {
+      date: '',
+      setDate: jest.fn(),
+      time: '',
+      setTime: jest.fn(),
+      guests: '',
+      setGuests: jest.fn(),
+      occasion: '',
+      setOccasion: jest.fn(),
+      handleSubmit: jest.fn(),
+      availableTimes: ['12:00', '13:00', '14:00'],
+      dispatch: jest.fn(),
+      submitForm: jest.fn(),
+    };
+  
+    const setup = (props = {}) => {
+      const utils = render(<BookingForm {...defaultProps} {...props} />);
+      const dateInput = utils.getByLabelText(/choose date/i);
+      const timeSelect = utils.getByLabelText(/choose time/i);
+      const guestsInput = utils.getByLabelText(/number of guests/i);
+      const occasionSelect = utils.getByLabelText(/occasion/i);
+      const submitButton = utils.getByText(/make your reservation/i);
+      return {
+        ...utils,
+        dateInput,
+        timeSelect,
+        guestsInput,
+        occasionSelect,
+        submitButton,
+      };
+    };
+  
+    test('submit button is disabled when form is incomplete', () => {
+      const { submitButton } = setup();
+      expect(submitButton).toBeDisabled();
+    });
+  
+    test('submit button is enabled when form is complete', () => {
+      const { dateInput, timeSelect, guestsInput, occasionSelect, submitButton } = setup({
+        date: '2024-12-31',
+        time: '12:00',
+        guests: '4',
+        occasion: 'Birthday',
+      });
+  
+      fireEvent.change(dateInput, { target: { value: '2024-12-31' } });
+      fireEvent.change(timeSelect, { target: { value: '12:00' } });
+      fireEvent.change(guestsInput, { target: { value: '4' } });
+      fireEvent.change(occasionSelect, { target: { value: 'Birthday' } });
+  
+      expect(submitButton).toBeEnabled();
+    });
+  
+    test('form submission calls handleSubmit when form is complete', () => {
+      const handleSubmit = jest.fn((e) => e.preventDefault());
+      const { dateInput, timeSelect, guestsInput, occasionSelect, submitButton } = setup({
+        handleSubmit,
+        date: '2024-12-31',
+        time: '12:00',
+        guests: '4',
+        occasion: 'Birthday',
+      });
+  
+      fireEvent.change(dateInput, { target: { value: '2024-12-31' } });
+      fireEvent.change(timeSelect, { target: { value: '12:00' } });
+      fireEvent.change(guestsInput, { target: { value: '4' } });
+      fireEvent.change(occasionSelect, { target: { value: 'Birthday' } });
+  
+      fireEvent.click(submitButton);
+  
+      expect(handleSubmit).toHaveBeenCalled();
+    });
+  
+    test('form submission does not call handleSubmit when form is incomplete', () => {
+      const handleSubmit = jest.fn((e) => e.preventDefault());
+      const { submitButton } = setup({ handleSubmit });
+  
+      fireEvent.click(submitButton);
+  
+      expect(handleSubmit).not.toHaveBeenCalled();
+    });
+  });
+ 
+ 
