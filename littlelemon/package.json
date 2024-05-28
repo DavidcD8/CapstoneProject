@@ -1,7 +1,7 @@
 {
   "name": "littlelemon",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://DavidcD8.github.io/CapstoneProject.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
