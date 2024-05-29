@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/CapstoneProject/static/css/main.e56bc93e.css",
-    "main.js": "/CapstoneProject/static/js/main.7af8745e.js",
-    "static/js/453.8dae57ee.chunk.js": "/CapstoneProject/static/js/453.8dae57ee.chunk.js",
-    "static/media/MariondAdrian.jpg": "/CapstoneProject/static/media/MariondAdrian.7f44c6d6e341a27d14b3.jpg",
-    "static/media/bruschetta.svg": "/CapstoneProject/static/media/bruschetta.29ea078fea3d3120ed22402e901b5bbc.svg",
-    "static/media/greeksalad.jpg": "/CapstoneProject/static/media/greeksalad.bed423a1fab5b210e347.jpg",
-    "static/media/restauranfood.jpg": "/CapstoneProject/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
-    "static/media/restaurant.jpg": "/CapstoneProject/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
-    "static/media/Logo.svg": "/CapstoneProject/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
-    "static/media/instagram.png": "/CapstoneProject/static/media/instagram.e719d8b29f452a16302d.png",
-    "static/media/businessman.png": "/CapstoneProject/static/media/businessman.533ee2d3d9b0b5ff9a23.png",
-    "static/media/girl.png": "/CapstoneProject/static/media/girl.85eeddaafae9a36b7f1b.png",
-    "static/media/woman.png": "/CapstoneProject/static/media/woman.5077f2e0499f29c01f12.png",
-    "static/media/bussinessman2.png": "/CapstoneProject/static/media/bussinessman2.6bd4263915f540cc26aa.png",
-    "static/media/star.png": "/CapstoneProject/static/media/star.618d11e122cbca3f8e9e.png",
-    "static/media/twitter.png": "/CapstoneProject/static/media/twitter.894988327f8d68209e91.png",
-    "index.html": "/CapstoneProject/index.html",
-    "static/media/delivery.svg": "/CapstoneProject/static/media/delivery.51c0da9db08aea9794adf2fd86bd007a.svg",
-    "main.e56bc93e.css.map": "/CapstoneProject/static/css/main.e56bc93e.css.map",
-    "main.7af8745e.js.map": "/CapstoneProject/static/js/main.7af8745e.js.map",
-    "453.8dae57ee.chunk.js.map": "/CapstoneProject/static/js/453.8dae57ee.chunk.js.map"
+    "main.css": "/static/css/main.821dbb6d.css",
+    "main.js": "/static/js/main.267c519b.js",
+    "static/js/453.8dae57ee.chunk.js": "/static/js/453.8dae57ee.chunk.js",
+    "static/media/MariondAdrian.jpg": "/static/media/MariondAdrian.7f44c6d6e341a27d14b3.jpg",
+    "static/media/bruschetta.svg": "/static/media/bruschetta.29ea078fea3d3120ed22402e901b5bbc.svg",
+    "static/media/greeksalad.jpg": "/static/media/greeksalad.bed423a1fab5b210e347.jpg",
+    "static/media/restauranfood.jpg": "/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
+    "static/media/restaurant.jpg": "/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
+    "static/media/Logo.svg": "/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
+    "static/media/instagram.png": "/static/media/instagram.e719d8b29f452a16302d.png",
+    "static/media/businessman.png": "/static/media/businessman.533ee2d3d9b0b5ff9a23.png",
+    "static/media/girl.png": "/static/media/girl.85eeddaafae9a36b7f1b.png",
+    "static/media/woman.png": "/static/media/woman.5077f2e0499f29c01f12.png",
+    "static/media/bussinessman2.png": "/static/media/bussinessman2.6bd4263915f540cc26aa.png",
+    "static/media/star.png": "/static/media/star.618d11e122cbca3f8e9e.png",
+    "static/media/twitter.png": "/static/media/twitter.894988327f8d68209e91.png",
+    "static/media/delivery.svg": "/static/media/delivery.51c0da9db08aea9794adf2fd86bd007a.svg",
+    "index.html": "/index.html",
+    "main.821dbb6d.css.map": "/static/css/main.821dbb6d.css.map",
+    "main.267c519b.js.map": "/static/js/main.267c519b.js.map",
+    "453.8dae57ee.chunk.js.map": "/static/js/453.8dae57ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e56bc93e.css",
-    "static/js/main.7af8745e.js"
+    "static/css/main.821dbb6d.css",
+    "static/js/main.267c519b.js"
   ]
 }
