@@ -7,7 +7,7 @@ import Footer from './Components/Footer';
 
 function App() {
   return (
-    <Router>
+     <Router basename="/CapstoneProject">
       <NavigationBar />
       <Main />
       <Footer />
