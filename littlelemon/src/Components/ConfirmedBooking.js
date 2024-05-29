@@ -1,10 +1,10 @@
 // ConfirmedBooking.js
 import React from 'react';
-
+import '../../src/App.css';
 function ConfirmedBooking() {
   return (
-    <section>
-      <p>Booking Confirmed</p>
+    <section id='conformation-body'>
+      <p id='confirmation-info'>Booking Confirmed</p>
     </section>
   );
 }

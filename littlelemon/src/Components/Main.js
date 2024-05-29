@@ -7,6 +7,8 @@ import Testimonials from './Testimonials';
 import Highlights from './Highlights';
 import ConfirmedBooking from './ConfirmedBooking';
 import { fetchAPI, submitAPI } from '../api/api';
+import Menu from './Menu';
+import Contact from './Contact';
 
 export const initializeTimes = (initialAvailableTimes) => [
   ...initialAvailableTimes,
@@ -25,9 +27,9 @@ function Main() {
   const navigate = useNavigate();
 
   const submitForm = async (formData) => {
-    
+
     const success = await submitAPI(formData);
-    
+
     if (success) {
       navigate('/confirmation');
     } else {
@@ -50,6 +52,8 @@ function Main() {
         } />
         <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
         <Route path="/herosection" element={<HeroSection />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/confirmation" element={<ConfirmedBooking />} />
         <Route path="/highlight" element={<Highlights />} />

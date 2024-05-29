@@ -231,10 +231,36 @@ nav {
     padding: 0.6rem;
   }
 }
+/* Menu */
+#menu-body{
+height: 100vh;
+}
+
+
+/* Contact */
+#contact-body{
+  height: 100vh;
+  }
 
 
 
+/* Confirmation */
+#confirmation-body {
+  background-color: #a0a0a0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 80%; /* Ensure the section has a width */
+  margin: 2rem auto; /* Center the section horizontally */
+}
 
+#confirmation-info {
+  text-align: center; /* Center the text */
+  display: grid;
+  place-items: center; /* Center the content both horizontally and vertically */
+  padding: 20px;
+}
 
 /* Specials Section */
 .highlight-section {
@@ -434,9 +460,10 @@ nav {
   padding: 2rem;
   background-color: #fff;
   display: grid;
-  grid-template-columns: 1fr auto; /* Two columns: text and images */
-  align-items: start; /* Align items to the top */
-  gap: 2rem; /* Gap between text and images */
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  height: 100vh;
 }
 
 .about-text {
@@ -569,50 +596,6 @@ nav {
 }
 
 
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  flex-wrap: wrap;
-  text-align: left;
-}
-
-.footer-column {
-  width: 30%;
-  margin-bottom: 1rem;
-}
-
-.footer-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.footer-column ul {
-  list-style-type: none;
-}
-
-.footer-column li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-column a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.footer-column a:hover {
-  color: #f4a261;
-}
-
 /* Media Queries */
 @media (max-width: 1024px) {
   .specials-list {
@@ -730,15 +713,43 @@ footer {
   color: #fff;
   padding: 2rem;
   text-align: center;
+  position: sticky;
+
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
+  text-align: left;
+}
+.footer-column {
+  width: 30%;
+  margin-bottom: 1rem;
 }
 
+.footer-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style-type: none;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-column a:hover {
+  color: #f4a261;
+}
 .logo img {
   width: 50px;
   height: 50px;
@@ -771,6 +782,7 @@ footer {
   .food-card {
     width: 80%;
   }
+  
 }
 
 @media (max-width: 768px) {
@@ -811,8 +823,10 @@ footer {
   }
 
   .footer-content {
+    display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 }
 
