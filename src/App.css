@@ -309,24 +309,30 @@ height: 100vh;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  height: 400px; /* Set a fixed height for the card */
+  overflow: hidden; /* Hide overflow content that exceeds the card's height */
 }
 
 .food-card-image {
   width: 100%;
-  max-height: 300px;
+  height: 200px; /* Fixed height for consistency */
   object-fit: cover;
-  height: auto;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
 .food-card-body {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto; /* Allows scrolling in case of overflow text */
 }
 
 .food-card-body-header {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .food-card-body-title-header {
@@ -350,6 +356,7 @@ height: 100vh;
   font-size: 1rem;
   color: #666;
   margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
 .food-card-delivery {
@@ -357,10 +364,7 @@ height: 100vh;
   align-items: center;
   background-color: #00000000;
   border: none;
-}
-
-.food-card-delivery-title:hover {
-  color: #F4CE14;
+  margin-top: 1rem;
 }
 
 .food-card-delivery-title {
@@ -369,9 +373,14 @@ height: 100vh;
   color: #000000;
 }
 
+.food-card-delivery-title:hover {
+  color: #F4CE14;
+}
+
 .delivery-icon {
   width: 24px;
   height: 24px;
+  margin-right: 0.5rem;
 }
 
 /* Testimonials Section */

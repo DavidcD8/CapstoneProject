@@ -1,70 +1,94 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Little Lemon Restaurant Website
 
-## Available Scripts
+## Description
+Little Lemon is a family-owned Mediterranean restaurant focused on traditional recipes served with a modern twist. This React application allows users to browse the restaurant's specials, make reservations, and interact with the online menu.
 
-In the project directory, you can run:
+## Features
+- **Home Page**: Displays a hero section with restaurant details and a "Reserve a Table" button.
+- **Specials**: Displays a list of the restaurant's weekly specials, including images, descriptions, and prices.
+- **Reservation**: Users can reserve a table by selecting a date, time, number of guests, and occasion (Birthday/Anniversary).
+- **Form Validation**: The reservation form validates user input and disables submission if the form is incomplete.
+- **State Management**: Utilizes React `useState` for managing form data and `useEffect` for persisting state.
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Hero Section](./src/assets/image/restauranfood.jpg)
+*Hero section of the Little Lemon Restaurant website.*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/little-lemon.git
+   cd little-lemon
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Open the app in your browser:
+   Navigate to `http://localhost:3000` to see the application in action.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+/src
+  /assets
+    /image
+      - greeksalad.jpg
+      - lemondessert.jpg
+      - bruschetta.svg
+      - restauranfood.jpg
+  /Components
+    - NavigationBar.js
+    - Main.js
+    - Footer.js
+    - Cards.js
+    - Highlight.js
+    - HeroSection.js
+    - BookingPage.js
+    - BookingForm.js
+  App.js
+  App.css
+```
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Navigation Bar**: The navigation bar provides links to different sections of the website, including "Home," "Specials," and "Booking."
+- **Specials**: The `Highlight` component dynamically displays the specials of the week with images and descriptions.
+- **Booking Page**: The user can make a reservation by selecting the date, time, guests, and occasion. The form validates inputs and allows for submitting reservation details.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Special Offer Images
+Here are the images of the specials for this week:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Greek Salad](./src/assets/image/greeksalad.jpg)
+*Greek Salad - $12.99*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Bruschetta](./src/assets/image/bruschetta.svg)
+*Bruschetta - $5.99*
 
-## Learn More
+![Lemon Dessert](./src/assets/image/lemondessert.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Lemon Dessert - $5.00*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **React.js**
+- **React Router**
+- **Figma** (for design)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgements
+This project was created as part of the Meta Front-End Developer Specialization via Coursera.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
