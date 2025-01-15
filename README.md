@@ -4,6 +4,11 @@
 ## Description
 Little Lemon is a family-owned Mediterranean restaurant focused on traditional recipes served with a modern twist. This React application allows users to browse the restaurant's specials, make reservations, and interact with the online menu.
 
+
+## Deployed Link
+https://davidcd8.github.io/CapstoneProject/
+
+
 ## Features
 - **Home Page**: Displays a hero section with restaurant details and a "Reserve a Table" button.
 - **Specials**: Displays a list of the restaurant's weekly specials, including images, descriptions, and prices.
